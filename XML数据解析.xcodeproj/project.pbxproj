@@ -15,6 +15,10 @@
 		F09BEF321F554E5500383138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F09BEF301F554E5500383138 /* LaunchScreen.storyboard */; };
 		F09BEF3D1F554E5500383138 /* XML____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BEF3C1F554E5500383138 /* XML____Tests.m */; };
 		F09BEF481F554E5500383138 /* XML____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BEF471F554E5500383138 /* XML____UITests.m */; };
+		F09BEF5A1F55532C00383138 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BEF591F55532C00383138 /* GDataXMLNode.m */; };
+		F09BEF5C1F55547800383138 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = F09BEF5B1F55547800383138 /* Notes.txt */; };
+		F09BEF5F1F55595700383138 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F09BEF5E1F55595700383138 /* libxml2.tbd */; };
+		F09BEF621F555C5000383138 /* NoteInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F09BEF611F555C5000383138 /* NoteInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,12 @@
 		F09BEF431F554E5500383138 /* XML数据解析UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XML数据解析UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09BEF471F554E5500383138 /* XML____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XML____UITests.m"; sourceTree = "<group>"; };
 		F09BEF491F554E5500383138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F09BEF581F55532C00383138 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		F09BEF591F55532C00383138 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		F09BEF5B1F55547800383138 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
+		F09BEF5E1F55595700383138 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		F09BEF601F555C5000383138 /* NoteInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteInfo.h; sourceTree = "<group>"; };
+		F09BEF611F555C5000383138 /* NoteInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09BEF5F1F55595700383138 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,7 @@
 				F09BEF3B1F554E5500383138 /* XML数据解析Tests */,
 				F09BEF461F554E5500383138 /* XML数据解析UITests */,
 				F09BEF201F554E5500383138 /* Products */,
+				F09BEF5D1F55595700383138 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +113,14 @@
 		F09BEF211F554E5500383138 /* XML数据解析 */ = {
 			isa = PBXGroup;
 			children = (
+				F09BEF5B1F55547800383138 /* Notes.txt */,
+				F09BEF571F55532C00383138 /* XMLSupport */,
 				F09BEF251F554E5500383138 /* AppDelegate.h */,
 				F09BEF261F554E5500383138 /* AppDelegate.m */,
 				F09BEF281F554E5500383138 /* ViewController.h */,
 				F09BEF291F554E5500383138 /* ViewController.m */,
+				F09BEF601F555C5000383138 /* NoteInfo.h */,
+				F09BEF611F555C5000383138 /* NoteInfo.m */,
 				F09BEF2B1F554E5500383138 /* Main.storyboard */,
 				F09BEF2E1F554E5500383138 /* Assets.xcassets */,
 				F09BEF301F554E5500383138 /* LaunchScreen.storyboard */,
@@ -138,6 +154,24 @@
 				F09BEF491F554E5500383138 /* Info.plist */,
 			);
 			path = "XML数据解析UITests";
+			sourceTree = "<group>";
+		};
+		F09BEF571F55532C00383138 /* XMLSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F09BEF581F55532C00383138 /* GDataXMLNode.h */,
+				F09BEF591F55532C00383138 /* GDataXMLNode.m */,
+			);
+			name = XMLSupport;
+			path = "../../../../Downloads/gdata-objectivec-client-master/Source/XMLSupport";
+			sourceTree = "<group>";
+		};
+		F09BEF5D1F55595700383138 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F09BEF5E1F55595700383138 /* libxml2.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +282,7 @@
 			files = (
 				F09BEF321F554E5500383138 /* LaunchScreen.storyboard in Resources */,
 				F09BEF2F1F554E5500383138 /* Assets.xcassets in Resources */,
+				F09BEF5C1F55547800383138 /* Notes.txt in Resources */,
 				F09BEF2D1F554E5500383138 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09BEF621F555C5000383138 /* NoteInfo.m in Sources */,
 				F09BEF2A1F554E5500383138 /* ViewController.m in Sources */,
+				F09BEF5A1F55532C00383138 /* GDataXMLNode.m in Sources */,
 				F09BEF271F554E5500383138 /* AppDelegate.m in Sources */,
 				F09BEF241F554E5500383138 /* main.m in Sources */,
 			);
@@ -424,10 +461,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "XML数据解析/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhdk.XML----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/lib/lxml2;
 			};
 			name = Debug;
 		};
@@ -435,10 +476,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "XML数据解析/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "zhdk.XML----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /usr/lib/lxml2;
 			};
 			name = Release;
 		};
